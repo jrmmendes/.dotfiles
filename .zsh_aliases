@@ -1,0 +1,49 @@
+# 
+# Aliases by jrmmendes
+#
+
+# [Directories]
+alias ..citi="cd /home/jrmmendes/Work/CITi"
+alias ..work="cd /home/jrmmendes/Work"
+
+# [Work]
+alias ..work.pr="cd /home/jrmmendes/Work/PR"
+alias ..work.fr="cd /home/jrmmendes/Work/Freelas"
+alias ..work.sb="cd /home/jrmmendes/Work/Sandbox"
+
+# [CITi]
+alias ..citi.talks="$HOME/Work/CITi/Talks"
+alias ..citi.projs="$HOME/Work/CITi/Projetos"
+
+# [Projects]
+alias ..c:clickcall="cd /home/jrmmendes/Work/CITi/Projetos/clickcall"
+alias ..c:limongi="cd /home/jrmmendes/Work/CITi/Projetos/limongi"
+
+alias :q="exit"
+alias :pat="pygmentize"
+
+# [Django]
+alias :pm="python manage.py "
+alias :pm.mi="python manage.py migrate "
+alias :pm.mm="python manage.py makemigrations "
+alias :pm.rs="python manage.py runserver "
+alias :pm.cs="python manage.py createsuperuser "
+alias :pm.sa="python manage.py startapp "
+
+# [Docker]
+alias :dc="docker container "
+alias :dc.ls="docker container ls "
+alias :dc.run="docker container run "
+alias :dc.exec="docker container exec "
+alias :dc.rm="docker container rm "
+alias :dc.purge="docker container rm $(docker ps -aq)"
+
+alias :di.rm="docker image rm "
+alias :di.ls="docker image ls"
+alias :di.purge="docker image rm $(docker images -aq)"
+
+# [Scripts]
+alias :gitio="python3 /home/jrmmendes/Scripts/gitio.py"
+
+# [Executáveis]
+alias x:minecraft="java -jar /home/jrmmendes/Programas/ShiginimaSE_v4200/linux_osx/Shiginima\ Launcher\ SE.v4200.jar" 
