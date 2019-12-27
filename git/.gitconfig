@@ -1,0 +1,32 @@
+[user]
+	email = jrmmendes@outlook.com
+	name = Romildo Júnior
+[credential]
+	helper = store
+[cola]
+	spellcheck = false
+	blameviewer = git gui blame
+	fontdiff = Fira Code Light,10,-1,5,50,0,0,0,0,0,Regular
+	tabwidth = 8
+	expandtab = true
+	linebreak = true
+	boldheaders = false
+[core]
+	excludesfile = /home/romildo/.gitignore
+[alias]
+	lg = log --all --graph --decorate --oneline --abbrev-commit
+	ac = !git add -A && git commit
+    co = checkout
+    cm = !git add -A && git commit -m
+    st = status -sb
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+    amend = commit -a --amend
+
+[gui]
+	editor = neovim
+	historybrowser = gitk
+[cola "color"]
+	add = "#46554C"
+	remove = "#553333"
