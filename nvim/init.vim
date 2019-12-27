@@ -1,14 +1,8 @@
-"Vim Dotfiles by Jrmmendes <jrmmendes@outlook.com>
+" Plugins
+source $HOME/.config/nvim/plug.vim
 
-" Start screen config
-source $HOME/.config/nvim/startup.vim
+" General settings
+source $HOME/.config/nvim/general.vim
 
-" Plugins management
-source $HOME/.config/nvim/config/plugins.vim
-
-" General configs
-source $HOME/.config/nvim/config/general.vim
-
-" Keybinds
-source $HOME/.config/nvim/config/keys.vim
-
+" General settings
+source $HOME/.config/nvim/keys.vim
