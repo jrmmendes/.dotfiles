@@ -1,20 +1,23 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:/usr/local/bin:/snap/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/jrmmendes/.oh-my-zsh"
+export ZSH="/home/romildo/.oh-my-zsh"
+source $HOME/.gvm/scripts/gvm
 
-
-# Python Venv
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Work
-source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +71,7 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo pip globalias git zsh-autosuggestions docker virtualenvwrapper)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,17 +100,28 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-alias .proj="cd /home/jrmmendes/Work/CITi/Projetos"
-alias .sand="cd /home/jrmmendes/Work/Sandbox"
 source $HOME/.zsh_aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Custom system vars
+source $HOME/.zsh_systemvars
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
 JAVA_HOME=/usr/java/jdk-11.0.2
-PATH=/home/jrmmendes/.jenv/shims:/home/jrmmendes/.jenv/bin:/home/jrmmendes/.local/bin:/usr/local/bin:/snap/bin:/home/jrmmendes/.rvm/gems/ruby-2.5.1/bin:/home/jrmmendes/.rvm/gems/ruby-2.5.1@global/bin:/usr/share/rvm/rubies/ruby-2.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/rvm/bin:/home/jrmmendes/.fzf/bin:/home/jrmmendes/bin:/usr/java/jdk-11.0.2/bin
+# PATH=/home/jrmmendes/.jenv/shims:/home/jrmmendes/.jenv/bin:/home/jrmmendes/.local/bin:/usr/local/bin:/snap/bin:/home/jrmmendes/.rvm/gems/ruby-2.5.1/bin:/home/jrmmendes/.rvm/gems/ruby-2.5.1@global/bin:/usr/share/rvm/rubies/ruby-2.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/rvm/bin:/home/jrmmendes/.fzf/bin:/home/jrmmendes/bin:/usr/java/jdk-11.0.2/bin
 
 export EDITOR="nvim"
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+
+# Python Venv
+# export WORKON_HOME=$HOME/.virtualenvs
+# export PROJECT_HOME=$HOME/Work
+# source /usr/local/bin/virtualenvwrapper.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH=$PATH:/home/romildo/.sdks/flutter/bin
+export PATH="$PATH:/usr/lib/dart/bin"

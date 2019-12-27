@@ -1,0 +1,29 @@
+# 
+# Aliases by romildo
+#
+
+# [Directories]
+alias .work="cd $HOME/Work/"
+alias .sand="cd $HOME/Work/Sandbox/"
+alias .work.pr="cd $HOME/Work/PR/"
+alias .work.fr="cd $HOME/Work/Freelas/"
+alias .work.sb="cd $HOME/Work/Sandbox/"
+
+# [CITi]
+alias citi=" $HOME/Work/CITi/"
+alias citi:proj="$HOME/Work/CITi/Projetos/2019.2"
+alias citi:talks="$HOME/Work/CITi/Talks/"
+alias citi:tecpel="$HOME/Work/CITi/Projetos/2019.2/tecpel"
+alias citi:engaj="$HOME/Work/CITi/Projetos/2019.2/engaj"
+alias citi:pontal="$HOME/Work/CITi/Projetos/2019.2/pontal"
+
+
+alias :q="exit"
+alias pat="pygmentize"
+
+# [Scripts]
+alias git:ignore="python3 /home/romildo/Scripts/gitio.py"
+alias toilet-fonts="cat ~/fonts.txt | less"
+
+# [Misc]
+alias popcorn="cd /home/romildo && ./.popcorn/Popcorn-Time"
